@@ -1,20 +1,62 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
-	<head>
-	</head>
-	<body>
-		<h1 style="color:rgb(99,0,0);"> Darth Vader "Hello World, from Mike"</h1>
-		<p style="font-size:21px;color:rgb(99,0,0);">"Who else has been here?"</p>
-		<p style="font-size:26px;color:rgb(0,0,99);">"Here, Jeti Thomas was.  Yes, hmmm. a change"<span style="font-size:24px;color:rgb(0,99,0);">said yoda</span></p>
-		<h3 style="font-size:18px;color:rgb(50,0,0);">"Here, Jeti kuldeep was."</h3>
-		<h2 style="color:blue">Elizabeth was here!!!</h2>
-		
-		
-		<h2 style="color:blue">Hello!!!</h2>
-		<h2>Hello!  Mikecoder1bc was here!</h2>
-		<h2>Hello! Irina was here!</h2>
-		<h2 style="color:FFA808;background-color:#000"><b><i>Andrew was here!</i></b></h2>
-		<h2>Hello! Gemma was here!</h2>
-		<h2 style="background-color:yellow; color: black"><strong>Hello! Mily was here as well!</strong></h2>
-	</body>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto rotate</title>
+    <link rel="stylesheet" href="./css/pannellum.css" />
+    <script type="text/javascript" src="./js/pannellum.js"></script>
+    <style>
+        .container-full{
+            position: absolute;
+            left:0;
+            right:0;
+            bottom: 0;
+            top: 0;
+        }
+        #panorama {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-full">
+
+        <div id="panorama"></div>
+    </div>
+   
+    <script>
+        pannellum.viewer('panorama', {
+            "type": "equirectangular",
+            "panorama": "https://pannellum.org/images/jfk.jpg",
+            "autoRotate": -2,
+            "autoLoad": true,
+            "hotSpots": [{
+                    "pitch": 14.1,
+                    "yaw": 1.5,
+                    "type": "info",
+                    "text": "Baltimore Museum of Art",
+                    "URL": "index2.html"
+                },
+                {
+                    "pitch": -9.4,
+                    "yaw": 222.6,
+                    "type": "info",
+                    "text": "Art Museum Drive"
+                },
+                {
+                    "pitch": -0.9,
+                    "yaw": 144.4,
+                    "type": "info",
+                    "text": "North Charles Street"
+                }
+            ]
+        });
+    </script>
+
+</body>
+
 </html>
